@@ -25,7 +25,8 @@ Difficulty: Basic
 
 Prompt:
 
-Write a function called addOne that takes a single number as an argument and returns that number plus 1.
+Write a function called addOne that takes a single number as an argument and 
+returns that number plus 1.
 
 Examples:
 
@@ -34,7 +35,9 @@ addOne(-5) //=> -4
 -----------------------------------------------------------------*/
 // Your solution for 01-addOne here:
 
-
+function addOne(num){
+  return num+1;
+}
 
 
 
@@ -45,7 +48,8 @@ Difficulty: Basic
 
 Prompt:
 
-Write a function called addTwoNumbers that accepts two numeric arguments and returns the sum of those two numbers.
+Write a function called addTwoNumbers that accepts two numeric arguments and returns 
+the sum of those two numbers.
 If either argument is not a Number, return the value of NaN.
 
 Examples:
@@ -57,8 +61,13 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 
-
-
+function addTwoNumbers (num1, num2){
+  if (typeof num1 === 'number' && typeof num2 === 'number'){
+  return num1 + num2;
+} else {
+  return NaN
+ }
+}
 
 
 /*-----------------------------------------------------------------
@@ -68,7 +77,8 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called sumNumbers that accepts a single array of numbers and returns the sum of the numbers in the array.
+- Write a function called sumNumbers that accepts a single array of numbers and returns the 
+sum of the numbers in the array.
 - If the array is empty, return 0 (zero).
 
 Examples:
@@ -80,9 +90,17 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
+function sumNumbers(total){
+  let sum=0;
+  for (let i=0; i < total.length; i++) {
+    sum += total[i];
+  }
+  return sum;
+}
 
+sumNumbers([10]);
 
-
+//1. create function sumNumbers - inside the 
 
 /*-----------------------------------------------------------------
 Challenge: 04-addList
